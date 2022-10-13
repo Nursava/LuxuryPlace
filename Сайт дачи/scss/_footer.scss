@@ -1,0 +1,448 @@
+.footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $colorGray;
+    color: $colorWhite;
+    &__block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__elem {
+        flex: 1 1 auto;
+        padding-right: 50px;
+        &__title {
+            font-family: "Playfair Display";
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        &__row {
+            font-family: "Raleway";
+            font-size: 14px;
+            line-height: 26px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            position: relative;
+            p {
+                cursor: pointer;
+                display: inline-block;
+                transition: color 0.2s ease 0s;
+            }
+            p:hover {
+                color: $colorSecond;
+            }
+        }
+        &__row::before {
+            content: "";
+            position: absolute;
+            transform: translateY(-50%);
+            right: 10px;
+            top: 50%;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        &__row:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    &__enter_email {
+        input {
+            font-family: "Dosis";
+            color: #999999;
+            display: block;
+            width: 220px;
+            box-sizing: border-box;
+            font-size: 16px;
+            padding: 15px;
+            background-color: #212121;
+            outline: 1px solid #2d2d2d;
+            transition: outline-color 0.3s ease 0s;
+            &:focus {
+                outline: 2px solid $colorSecond;
+                outline-offset: -1px;
+            }
+        }
+    }
+
+    &__subscribe {
+        margin-top: 30px;
+        background-color: $colorSecond;
+        color: $colorBlack;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        width: 150px;
+        font-family: "Dosis";
+        text-transform: uppercase;
+        transition: background-color 0.3s ease 0s;
+        display: block;
+        &:hover {
+            background-color: $colorWhite;
+        }
+    }
+
+    &__line {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        height: 1px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo {
+        text-transform: uppercase;
+        font-family: "Cormorant";
+        text-align: center;
+        font-size: 40px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        user-select: none;
+    }
+
+    &__privacy_link {
+        color: $colorSecond;
+        transition: color 0.3s ease 0s;
+        &:hover {
+            color: $colorWhite;
+        }
+    }
+
+    &__privacy {
+        text-align: center;
+        font-size: 15px;
+        font-family: "Raleway";
+    }
+}
+.socials {
+    &__icon {
+        margin-right: 15px;
+        svg {
+            height: 18px;
+            width: 18px;
+            fill: $colorSecond;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        &__elem {
+            padding-right: 50px;
+            &__title {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            &__row {
+                font-size: 13px;
+                line-height: 22px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+        }
+
+        &__email {
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+
+        &__enter_email {
+            input {
+                width: 200px;
+                box-sizing: border-box;
+                font-size: 14px;
+                padding: 15px;
+                background-color: #212121;
+                outline: 1px solid #2d2d2d;
+                transition: outline-color 0.3s ease 0s;
+                &:focus {
+                    outline: 2px solid $colorSecond;
+                    outline-offset: -1px;
+                }
+            }
+        }
+
+        &__subscribe {
+            margin-top: 30px;
+            font-size: 15px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        &__line {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__logo {
+            font-size: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        &__privacy {
+            font-size: 12px;
+        }
+    }
+    .socials {
+        &__icon {
+            margin-right: 15px;
+            svg {
+                height: 14px;
+                width: 14px;
+                fill: $colorSecond;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .footer {
+        padding: 30px 40px;
+        &__elem {
+            padding-right: 50px;
+            &__title {
+                font-size: 20px;
+                margin-bottom: 24px;
+            }
+
+            &__row {
+                font-size: 15px;
+                line-height: 22px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+
+        &__elem:last-child {
+            display: none;
+        }
+
+        &__email {
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+
+        &__enter_email {
+            input {
+                width: 250px;
+                box-sizing: border-box;
+                font-size: 18px;
+                padding: 15px;
+                background-color: #212121;
+                outline: 1px solid #2d2d2d;
+                transition: outline-color 0.3s ease 0s;
+                &:focus {
+                    outline: 2px solid $colorSecond;
+                    outline-offset: -1px;
+                }
+            }
+        }
+
+        &__subscribe {
+            margin-top: 30px;
+            font-size: 18px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        &__line {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__logo {
+            font-size: 35px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        &__privacy {
+            font-size: 15px;
+        }
+    }
+    .socials {
+        &__icon {
+            margin-right: 15px;
+            svg {
+                height: 18px;
+                width: 18px;
+                fill: $colorSecond;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        padding: 30px 40px;
+        &__elem {
+            flex: 0 1 160px;
+            padding-right: 20px;
+            &__title {
+                font-size: 20px;
+                margin-bottom: 24px;
+            }
+
+            &__row {
+                font-size: 15px;
+                line-height: 22px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+
+        &__elem:nth-child(n + 4) {
+            display: none;
+        }
+
+        &__email {
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+
+        &__enter_email {
+            input {
+                width: 200px;
+                box-sizing: border-box;
+                font-size: 18px;
+                padding: 15px;
+                background-color: #212121;
+                outline: 1px solid #2d2d2d;
+                transition: outline-color 0.3s ease 0s;
+                &:focus {
+                    outline: 2px solid $colorSecond;
+                    outline-offset: -1px;
+                }
+            }
+        }
+
+        &__subscribe {
+            margin-top: 30px;
+            font-size: 18px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        &__line {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__logo {
+            font-size: 35px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        &__privacy {
+            font-size: 15px;
+        }
+    }
+    .socials {
+        &__icon {
+            margin-right: 15px;
+            svg {
+                height: 18px;
+                width: 18px;
+                fill: $colorSecond;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .footer {
+        padding: 30px 40px;
+        &__block {
+            flex-direction: column;
+        }
+        &__elem {
+            flex: 0 1 160px;
+            &:nth-child(n + 2) {
+                margin-top: 50px;
+            }
+            &__title {
+                font-size: 20px;
+                margin-bottom: 24px;
+            }
+
+            &__row {
+                font-size: 15px;
+                line-height: 22px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+
+        &__elem:nth-child(n + 4) {
+            display: none;
+        }
+
+        &__email {
+            margin-left: 10px;
+            margin-top: 60px;
+        }
+
+        &__enter_email {
+            input {
+                width: 200px;
+                box-sizing: border-box;
+                font-size: 18px;
+                padding: 15px;
+                background-color: #212121;
+                outline: 1px solid #2d2d2d;
+                transition: outline-color 0.3s ease 0s;
+                &:focus {
+                    outline: 2px solid $colorSecond;
+                    outline-offset: -1px;
+                }
+            }
+        }
+
+        &__subscribe {
+            margin-top: 30px;
+            font-size: 18px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        &__line {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__logo {
+            font-size: 35px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        &__privacy {
+            font-size: 15px;
+        }
+    }
+    .socials {
+        &__icon {
+            margin-right: 15px;
+            svg {
+                height: 18px;
+                width: 18px;
+                fill: $colorSecond;
+            }
+        }
+    }
+}

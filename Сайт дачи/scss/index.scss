@@ -1,0 +1,35 @@
+//======================= fonts ============================
+
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Parisienne:regular);
+@import url(https://fonts.googleapis.com/css?family=Raleway:regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Cormorant:300,regular,500,600,700,300italic,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+@import url(https://fonts.googleapis.com/css?family=Dosis:200,300,regular,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise:regular);
+
+//======================= main css ============================
+
+$colorSecond: rgb(184, 148, 112);
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorGray: #151515;
+
+@import "zero";
+@import "header";
+@import "main";
+@import "description";
+@import "slider";
+@import "services";
+@import "testimotionals";
+@import "awards";
+@import "final";
+@import "footer";
+
+section.description {
+    scroll-behavior: smooth;
+}
+
+body {
+    user-select: none;
+}

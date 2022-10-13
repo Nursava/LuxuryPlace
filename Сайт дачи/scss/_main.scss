@@ -1,0 +1,193 @@
+.fullscreen {
+    &__window {
+        overflow: hidden;
+        min-height: 100vh;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__elem {
+        img {
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            transition: opacity 0.8s ease-in-out 0s, visibility 0.8s ease-in-out 0s, transform 7s linear 1s;
+            &.current {
+                visibility: visible;
+                transform: scale(1.3);
+                opacity: 1;
+                transition: opacity 0.8s ease-in-out 0s, transform 7s linear 0s;
+            }
+        }
+    }
+
+    &__text {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        left: 50%;
+        color: $colorWhite;
+    }
+
+    #example .new {
+        opacity: 0;
+    }
+    #example .div_opacity {
+        transition: opacity 0.3s ease-in-out;
+        opacity: 1;
+    }
+
+    #example2 .new {
+        opacity: 0;
+    }
+    #example2 .div_opacity {
+        transition: opacity 0.3s ease-in-out;
+        opacity: 1;
+    }
+
+    &__pre-title {
+        font-size: 100px;
+        font-weight: 400;
+        text-align: center;
+        font-family: "Parisienne";
+        &.dissapeared {
+            transition: opacity 0.3s ease-in-out 0s;
+            opacity: 0;
+        }
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    &__title {
+        margin-top: 50px;
+        font-family: "Parisienne";
+        font-size: 100px;
+        letter-spacing: 0px;
+        font-weight: 500;
+        &.dissapeared {
+            transition: opacity 0.3s ease-in-out 0s;
+            opacity: 0;
+        }
+    }
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        cursor: pointer;
+        svg {
+            width: 35px;
+            height: 35px;
+            fill: $colorWhite;
+            transition: fill 0.2s ease 0s;
+            &:hover {
+                fill: $colorSecond;
+            }
+        }
+
+        &_left {
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &_right {
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &_down {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 15px;
+            svg {
+                height: 35px;
+                width: 35px;
+            }
+        }
+    }
+}
+
+#fullscreen__blur {
+    opacity: 0.8;
+    visibility: visible;
+    animation: appear 1s 1 0s linear;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .fullscreen {
+        &__pre-title {
+            font-size: 80px;
+        }
+        &__arrow {
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+            &_left {
+                left: 15px;
+            }
+            &_right {
+                right: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .fullscreen {
+        &__pre-title {
+            font-size: 60px;
+        }
+        &__arrow {
+            svg {
+                width: 25px;
+                height: 25px;
+            }
+            &_left {
+                left: 10px;
+            }
+            &_right {
+                right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .fullscreen {
+        &__pre-title {
+            font-size: 60px;
+        }
+        &__arrow {
+            display: none;
+            svg {
+                width: 25px;
+                height: 25px;
+            }
+            &_left {
+                left: 10px;
+            }
+            &_right {
+                right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+}
